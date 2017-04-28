@@ -28,12 +28,19 @@ class App extends Component {
     )
   , 300)
 
+  renderVideoDetail () {
+    if (!this.state.selectedVideo) {
+      return <div>Loading...</div>
+    }
+    return <VideoDetail video={ this.state.selectedVideo } />
+  }
+
 
   render () {
     return (
       <div>
         <SearchBar onSearchTermChange={ this.videoSearch } />
-        <VideoDetail video={ this.state.selectedVideo } />
+        { this.renderVideoDetail() }
         <VideoList
           onVideoSelect={ selectedVideo => this.setState({ selectedVideo }) }
           videos={ this.state.videos } />
