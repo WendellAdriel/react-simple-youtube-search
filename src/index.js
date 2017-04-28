@@ -2,8 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import SearchBar from './components/search-bar'
-
-const API_KEY = 'AIzaSyBxJgDW2pcBTSsyraCqBvhBjeegy2H-nEU'
+import { API_KEY } from './config/config'
 
 const App = () => (
   <div>

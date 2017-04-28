@@ -12,6 +12,12 @@
 yarn
 ```
 
+- Enter the `src/config` folder and copy the `config.js.example` file to `config.js` file
+
+```
+cp config.js.example config.js
+```
+
 ## Commands available
 
 - To run the app in development mode use
