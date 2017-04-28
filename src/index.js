@@ -25,7 +25,7 @@ class App extends Component {
     YTSearch({ key: Config.API_KEY, term }, videos => this.setState({ videos, selectedVideo: videos[0] }))
   }
 
-  videoSearch = _.debounce(term => this.videoSearch(term), 300)
+  videoSearch = debounce(term => this.videoSearch(term), 300)
 
   render () {
     return (
