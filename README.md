@@ -18,6 +18,8 @@ yarn
 cp config.js.example config.js
 ```
 
+- Put your **Youtube API key** in the `src/config/config.js` file
+
 ## Commands available
 
 - To run the app in development mode use
