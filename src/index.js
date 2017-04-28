@@ -21,11 +21,13 @@ class App extends Component {
     this.videoSearch('Dio full concert')
   }
 
-  videoSearch (term) {
-    YTSearch({ key: Config.API_KEY, term }, videos => this.setState({ videos, selectedVideo: videos[0] }))
-  }
+  videoSearch = debounce(term =>
+    YTSearch(
+      { key: Config.API_KEY, term },
+      videos => this.setState({ videos, selectedVideo: videos[0] })
+    )
+  , 300)
 
-  videoSearch = debounce(term => this.videoSearch(term), 300)
 
   render () {
     return (
